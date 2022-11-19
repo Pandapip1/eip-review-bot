@@ -1,0 +1,24 @@
+name: EIP Review Bot
+description: Request reviewers for EIP modifications
+author: ethereum
+
+inputs:
+  token:
+    description: GitHub token with repo permissions
+    required: true
+  config:
+    description: Config file location
+    required: false
+    default: ''
+  pr_number:
+    description: The PR Number
+    required: false
+    default: ''
+
+runs:
+  using: node16
+  main: dist/index.js
+
+branding:
+  icon: settings
+  color: gray-dark
